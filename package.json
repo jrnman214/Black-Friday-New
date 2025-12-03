@@ -21,6 +21,9 @@
   },
   "homepage": "https://github.com/jrnman214/Black-Friday-New#readme",
   "dependencies": {
-    "vite": "^6.0.0"
+    "vite": "^5.0.0"
+  },
+  "engines": {
+    "node": ">=18.0.0"
   }
 }

@@ -489,20 +489,67 @@ footer {
 
 .breakdown-item:hover .item-mockup {
     transform: scale(1.1) rotate(5deg);
-}.breakdown-item:hover .item-mockup {
-    transform: scale(1.1) rotate(5deg);
 }
 
-.breakdown-item .icon-mockup {
-    width: 100px;
-    height: 100px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 3.5rem;
-    background: rgba(255, 0, 0, 0.1);
-    border: 2px solid #ff0000;
-    border-radius: 10px;
-    box-shadow: 0 0 15px rgba(255, 0, 0, 0.3);
-    filter: none;
+/* Tier Styles */
+
+/* Silver */
+.pricing-card.silver {
+    background: linear-gradient(160deg, rgba(192, 192, 192, 0.15) 0%, rgba(0, 0, 0, 0.9) 60%) !important;
+    border: 1px solid rgba(192, 192, 192, 0.5) !important;
+    box-shadow: 0 0 20px rgba(192, 192, 192, 0.1) !important;
+    transform: none !important;
+    z-index: auto !important;
 }
+.pricing-card.silver .card-header {
+    border-bottom: 1px solid rgba(192, 192, 192, 0.5) !important;
+    background: rgba(192, 192, 192, 0.05) !important;
+}
+.pricing-card.silver .value-tag {
+    color: #c0c0c0 !important;
+}
+
+/* Gold */
+.pricing-card.gold {
+    background: linear-gradient(160deg, rgba(255, 215, 0, 0.15) 0%, rgba(0, 0, 0, 0.9) 60%);
+    border: 1px solid rgba(255, 215, 0, 0.5);
+    box-shadow: 0 0 20px rgba(255, 215, 0, 0.1);
+}
+.pricing-card.gold .card-header {
+    border-bottom: 1px solid rgba(255, 215, 0, 0.5);
+    background: rgba(255, 215, 0, 0.05);
+}
+.pricing-card.gold .value-tag {
+    color: #ffd700;
+}
+
+/* Platinum */
+.pricing-card.platinum {
+    background: linear-gradient(160deg, rgba(229, 228, 226, 0.15) 0%, rgba(0, 0, 0, 0.9) 60%);
+    border: 1px solid rgba(229, 228, 226, 0.5);
+    box-shadow: 0 0 20px rgba(229, 228, 226, 0.1);
+}
+.pricing-card.platinum .card-header {
+    border-bottom: 1px solid rgba(229, 228, 226, 0.5);
+    background: rgba(229, 228, 226, 0.05);
+}
+.pricing-card.platinum .value-tag {
+    color: #e5e4e2;
+}
+
+/* Mentorship */
+.pricing-card.mentorship {
+    background: linear-gradient(160deg, rgba(255, 0, 0, 0.15) 0%, rgba(0, 0, 0, 0.9) 60%);
+    border: 1px solid rgba(255, 0, 0, 0.5);
+    box-shadow: 0 0 20px rgba(255, 0, 0, 0.2);
+    max-width: 600px;
+    width: 100%;
+}
+.pricing-card.mentorship .card-header {
+    border-bottom: 1px solid rgba(255, 0, 0, 0.5);
+    background: rgba(255, 0, 0, 0.05);
+}
+.pricing-card.mentorship .value-tag {
+    color: #ff0000;
+}
+

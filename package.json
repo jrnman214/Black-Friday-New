@@ -20,7 +20,7 @@
     "url": "https://github.com/jrnman214/Black-Friday-New/issues"
   },
   "homepage": "https://github.com/jrnman214/Black-Friday-New#readme",
-  "devDependencies": {
-    "vite": "^7.2.6"
+  "dependencies": {
+    "vite": "^6.0.0"
   }
 }

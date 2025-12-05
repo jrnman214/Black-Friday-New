@@ -1042,3 +1042,77 @@ footer {
     transform-style: preserve-3d;
     perspective: 1000px;
 }
+
+/* Mobile Optimization */
+@media (max-width: 768px) {
+
+    /* Typography */
+    .main-headline {
+        font-size: 2.2rem;
+    }
+
+    .sub-headline {
+        font-size: 1rem;
+        padding: 0 15px;
+    }
+
+    .section-headline {
+        font-size: 2rem;
+    }
+
+    .card-header h3 {
+        font-size: 1.8rem;
+    }
+
+    .value-tag {
+        font-size: 1.5rem;
+    }
+
+    .price-tag {
+        font-size: 1.4rem;
+    }
+
+    .cta-btn {
+        font-size: 1.2rem;
+        padding: 12px 15px;
+    }
+
+    /* Countdown Timer */
+    .countdown-container {
+        gap: 5px;
+        margin-bottom: 20px;
+    }
+
+    .time-box {
+        padding: 10px 15px;
+        min-width: 60px;
+        border-width: 1px;
+    }
+
+    .time-box span {
+        font-size: 2rem;
+    }
+
+    .time-box .label {
+        font-size: 0.7rem;
+        margin-top: 2px;
+    }
+
+    .separator {
+        font-size: 2rem;
+        margin-top: -15px;
+    }
+
+    /* Layout Adjustments */
+    .hero-section {
+        padding-top: 10px;
+    }
+
+    .video-wrapper {
+        margin-bottom: 30px;
+    }
+
+    .content-container {
+        padding: 0 15px;
+    }
+}

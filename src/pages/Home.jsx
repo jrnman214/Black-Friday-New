@@ -140,7 +140,7 @@ const Home = () => {
                     <div className="video-wrapper animate-on-scroll zoom-in delay-200">
                         <div style={{ position: 'relative', paddingBottom: '56.25%', height: 0, overflow: 'hidden' }}>
                             <video
-                                src="/assets/cyber sale.mp4"
+                                src="/assets/cyber.mp4"
                                 controls
                                 autoPlay
                                 muted

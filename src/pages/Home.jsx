@@ -204,7 +204,10 @@ const Home = () => {
                                     <li>BONUS #2 Personalized Passive Income Game Plan ($10k Revenue)</li>
                                     <li>BONUS #3 Lifetime Access To AI Credit Repair Software</li>
                                 </ul>
-                                <Link to="/checkout?plan=silver" className="cta-btn">YES! I WANT THIS DEAL!</Link>
+                                <a href="https://www.fanbasis.com/agency-checkout/6figurwifi/lJxg" className="cta-btn" target="_blank" rel="noopener noreferrer">
+                                    YES! I WANT THIS FOR ONLY $550
+                                    <span className="cta-subtext">or payments as low as $140</span>
+                                </a>
                             </div>
                         </div>
 
@@ -253,7 +256,10 @@ const Home = () => {
                                     <li>BONUS #3 Personalized Passive Income Game Plan ($10k Revenue)</li>
                                     <li>BONUS #4 Lifetime Access To AI Credit Repair Software</li>
                                 </ul>
-                                <Link to="/checkout?plan=gold" className="cta-btn">YES! I WANT THIS DEAL!</Link>
+                                <a href="https://www.fanbasis.com/agency-checkout/6figurwifi/wjXXw" className="cta-btn" target="_blank" rel="noopener noreferrer">
+                                    YES! I WANT THIS FOR ONLY $1,750
+                                    <span className="cta-subtext">or payments as low as $446</span>
+                                </a>
                             </div>
                         </div>
 
@@ -305,7 +311,7 @@ const Home = () => {
                                     <li>BONUS #4 Personalized Passive Income Game Plan ($10k Revenue)</li>
                                     <li>BONUS #5 Lifetime Access To AI Credit Repair Software</li>
                                 </ul>
-                                <Link to="/checkout?plan=platinum" className="cta-btn">YES! I WANT THIS DEAL!</Link>
+                                <a href="https://www.fanbasis.com/agency-checkout/6figurwifi/W40x" className="cta-btn" target="_blank" rel="noopener noreferrer">YES! I WANT THIS DEAL!</a>
                             </div>
                         </div>
 
@@ -328,7 +334,7 @@ const Home = () => {
                                     <li>Priority Support 24/7</li>
                                     <li className="highlight-red">GUARANTEED RESULTS OR MONEY BACK</li>
                                 </ul>
-                                <Link to="/checkout?plan=mentorship" className="cta-btn">YES! I WANT THIS DEAL!</Link>
+                                <a href="https://www.fanbasis.com/agency-checkout/6figurwifi/AnBBz" className="cta-btn" target="_blank" rel="noopener noreferrer">YES! I WANT THIS DEAL!</a>
                             </div>
                         </div>
                     </div>

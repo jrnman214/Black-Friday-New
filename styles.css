@@ -136,7 +136,6 @@ h4 {
     font-size: 1.2rem;
     color: #ccc;
     margin-top: -30px;
-    /* Pull it closer to the headline */
     margin-bottom: 40px;
     text-transform: uppercase;
     letter-spacing: 1px;
@@ -171,13 +170,9 @@ h4 {
 /* Silver Highlight */
 .pricing-card.silver {
     border: 4px solid #ffd700 !important;
-    /* Gold border */
     box-shadow: 0 0 20px rgba(255, 215, 0, 0.6), inset 0 0 10px rgba(255, 215, 0, 0.3) !important;
-    /* Glowing effect */
     transform: scale(1.05);
-    /* Slightly larger */
     z-index: 10;
-    /* Bring to front */
     position: relative;
 }
 
@@ -285,11 +280,44 @@ h4 {
     width: 100%;
     margin-top: auto;
     text-transform: uppercase;
-    transition: background 0.3s;
+    transition: background 0.3s, transform 0.3s;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    line-height: 1.2;
+    text-decoration: none;
+    border-radius: 5px;
+    box-shadow: 0 4px 15px rgba(255, 0, 0, 0.3);
+    animation: bounce 2s ease-in-out infinite;
 }
 
 .cta-btn:hover {
     background: #cc0000;
+    transform: scale(1.05);
+    animation: none;
+}
+
+.cta-subtext {
+    font-size: 0.75rem;
+    font-weight: normal;
+    text-transform: none;
+    color: #fff;
+    opacity: 0.9;
+    display: block;
+}
+
+@keyframes bounce {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-10px);
+    }
 }
 
 .mentorship-container {
@@ -464,7 +492,6 @@ footer {
     color: #ff0000;
     font-weight: bold;
     margin-top: -25px;
-    /* Align with numbers */
 }
 
 /* Mockup Styles */
@@ -492,8 +519,6 @@ footer {
 }
 
 /* Tier Styles */
-
-/* Silver */
 .pricing-card.silver {
     background: linear-gradient(160deg, rgba(192, 192, 192, 0.15) 0%, rgba(0, 0, 0, 0.9) 60%) !important;
     border: 1px solid rgba(192, 192, 192, 0.5) !important;
@@ -511,7 +536,6 @@ footer {
     color: #c0c0c0 !important;
 }
 
-/* Gold */
 .pricing-card.gold {
     background: linear-gradient(160deg, rgba(255, 215, 0, 0.15) 0%, rgba(0, 0, 0, 0.9) 60%);
     border: 1px solid rgba(255, 215, 0, 0.5);
@@ -527,7 +551,6 @@ footer {
     color: #ffd700;
 }
 
-/* Platinum */
 .pricing-card.platinum {
     background: linear-gradient(160deg, rgba(229, 228, 226, 0.15) 0%, rgba(0, 0, 0, 0.9) 60%);
     border: 1px solid rgba(229, 228, 226, 0.5);
@@ -543,7 +566,6 @@ footer {
     color: #e5e4e2;
 }
 
-/* Mentorship */
 .pricing-card.mentorship {
     background: linear-gradient(160deg, rgba(255, 0, 0, 0.15) 0%, rgba(0, 0, 0, 0.9) 60%);
     border: 1px solid rgba(255, 0, 0, 0.5);
@@ -561,15 +583,12 @@ footer {
     color: #ff0000;
 }
 
-
-/* Bonus Mockup Backgrounds */
 .free-bonuses-section .item-mockup {
     background-color: #000;
     padding: 5px;
     border-radius: 10px;
     border: 1px solid #333;
 }
-
 
 /* Testimonials Section */
 .testimonials-section {
@@ -596,7 +615,6 @@ footer {
 .testimonial-card .video-container {
     position: relative;
     padding-bottom: 56.25%;
-    /* 16:9 Aspect Ratio */
     height: 0;
     overflow: hidden;
     margin-bottom: 15px;
@@ -686,7 +704,6 @@ footer {
     line-height: 1.6;
 }
 
-
 /* Animations */
 @keyframes fadeInUp {
     from {
@@ -724,12 +741,10 @@ footer {
 
 .animate-on-scroll {
     opacity: 0;
-    /* Hidden by default */
     will-change: opacity, transform;
 }
 
 .animate-on-scroll.visible {
-    /* Animation is applied via specific classes when visible */
     opacity: 1;
 }
 
@@ -765,7 +780,6 @@ footer {
 .delay-500 {
     animation-delay: 0.5s;
 }
-
 
 /* Parallax Background */
 .parallax-shapes {
@@ -824,7 +838,6 @@ footer {
     z-index: -1;
 }
 
-/* 3D Tilt Effect */
 .tilt-card {
     transition: transform 0.1s ease-out;
     transform-style: preserve-3d;
@@ -833,8 +846,6 @@ footer {
 
 /* Mobile Optimization */
 @media (max-width: 768px) {
-
-    /* Typography */
     .main-headline {
         font-size: 2.2rem;
     }
@@ -860,19 +871,200 @@ footer {
         font-size: 1.5rem;
     }
 
-    .price-tag {
-        font-size: 1.4rem;
+    .time-box {
+        padding: 10px 15px;
+        min-width: 60px;
+        border-width: 1px;
     }
 
-    .cta-btn {
-        font-size: 1.2rem;
-        padding: 12px 15px;
+    .time-box span {
+        font-size: 2rem;
     }
 
-    /* Countdown Timer */
-    .countdown-container {
-        gap: 5px;
-        margin-bottom: 20px;
+    .time-box .label {
+        font-size: 0.7rem;
+        margin-top: 2px;
+    }
+
+    .separator {
+        font-size: 2rem;
+        margin-top: -15px;
+    }
+
+    .hero-section {
+        padding-top: 10px;
+    }
+
+    margin: 0;
+    color: #ccc;
+    line-height: 1.6;
+}
+
+/* Animations */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translate3d(0, 40px, 0);
+    }
+
+    to {
+        opacity: 1;
+        transform: translate3d(0, 0, 0);
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes zoomIn {
+    from {
+        opacity: 0;
+        transform: scale3d(0.9, 0.9, 0.9);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale3d(1, 1, 1);
+    }
+}
+
+.animate-on-scroll {
+    opacity: 0;
+    will-change: opacity, transform;
+}
+
+.animate-on-scroll.visible {
+    opacity: 1;
+}
+
+.fade-in-up.visible {
+    animation: fadeInUp 0.8s ease-out forwards;
+}
+
+.fade-in.visible {
+    animation: fadeIn 1s ease-out forwards;
+}
+
+.zoom-in.visible {
+    animation: zoomIn 0.6s ease-out forwards;
+}
+
+/* Stagger Delays */
+.delay-100 {
+    animation-delay: 0.1s;
+}
+
+.delay-200 {
+    animation-delay: 0.2s;
+}
+
+.delay-300 {
+    animation-delay: 0.3s;
+}
+
+.delay-400 {
+    animation-delay: 0.4s;
+}
+
+.delay-500 {
+    animation-delay: 0.5s;
+}
+
+/* Parallax Background */
+.parallax-shapes {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    overflow: hidden;
+    pointer-events: none;
+}
+
+.shape {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(80px);
+    opacity: 0.15;
+}
+
+.shape-1 {
+    top: -10%;
+    left: -10%;
+    width: 50vw;
+    height: 50vw;
+    background: radial-gradient(circle, #ff0000, transparent);
+}
+
+.shape-2 {
+    top: 40%;
+    right: -20%;
+    width: 40vw;
+    height: 40vw;
+    background: radial-gradient(circle, #800000, transparent);
+}
+
+.shape-3 {
+    bottom: -10%;
+    left: 20%;
+    width: 60vw;
+    height: 60vw;
+    background: radial-gradient(circle, #ff3333, transparent);
+}
+
+.parallax-bg-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('/assets/hero-bg.png');
+    background-size: cover;
+    background-position: center;
+    opacity: 0.3;
+    mix-blend-mode: overlay;
+    z-index: -1;
+}
+
+.tilt-card {
+    transition: transform 0.1s ease-out;
+    transform-style: preserve-3d;
+    perspective: 1000px;
+}
+
+/* Mobile Optimization */
+@media (max-width: 768px) {
+    .main-headline {
+        font-size: 2.2rem;
+    }
+
+    .sub-headline {
+        font-size: 1rem;
+        padding: 0 15px;
+    }
+
+    .section-headline {
+        font-size: 2rem;
+    }
+
+    .copy-headline {
+        font-size: 1.6rem;
+    }
+
+    .card-header h3 {
+        font-size: 1.8rem;
+    }
+
+    .value-tag {
+        font-size: 1.5rem;
     }
 
     .time-box {
@@ -895,7 +1087,6 @@ footer {
         margin-top: -15px;
     }
 
-    /* Layout Adjustments */
     .hero-section {
         padding-top: 10px;
     }
@@ -906,5 +1097,22 @@ footer {
 
     .content-container {
         padding: 0 15px;
+    }
+
+    .price-tag {
+        font-size: 1.4rem;
+    }
+
+    .cta-btn {
+        font-size: 0.95rem;
+        padding: 10px 8px;
+        text-align: center;
+        word-wrap: break-word;
+        line-height: 1.3;
+    }
+
+    .cta-subtext {
+        font-size: 0.65rem;
+        margin-top: 2px;
     }
 }

@@ -8,25 +8,29 @@ import { Link } from 'react-router-dom';
 // Vite serves public folder at root.
 
 const Home = () => {
-    const [timeLeft, setTimeLeft] = useState({ minutes: 15, seconds: 0 });
+    const [timeLeft, setTimeLeft] = useState({ hours: 0, minutes: 0, seconds: 0 });
     const [activeFaq, setActiveFaq] = useState(null);
 
-    // Countdown Timer
+    // Countdown Timer - Time until midnight
     useEffect(() => {
-        // Set initial total seconds (15 minutes * 60)
-        let totalSeconds = 15 * 60;
+        const calculateTimeUntilMidnight = () => {
+            const now = new Date();
+            const midnight = new Date();
+            midnight.setHours(24, 0, 0, 0); // Set to next midnight
+
+            const diff = midnight - now;
+            const hours = Math.floor(diff / (1000 * 60 * 60));
+            const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((diff % (1000 * 60)) / 1000);
+
+            return { hours, minutes, seconds };
+        };
+
+        // Set initial time
+        setTimeLeft(calculateTimeUntilMidnight());
 
         const timer = setInterval(() => {
-            totalSeconds -= 1;
-            const minutes = Math.floor(totalSeconds / 60);
-            const seconds = totalSeconds % 60;
-
-            setTimeLeft({ minutes, seconds });
-
-            if (totalSeconds <= 0) {
-                clearInterval(timer);
-                setTimeLeft({ minutes: 0, seconds: 0 });
-            }
+            setTimeLeft(calculateTimeUntilMidnight());
         }, 1000);
 
         return () => clearInterval(timer);
@@ -123,6 +127,11 @@ const Home = () => {
                 <div className="content-container">
                     {/* Countdown Timer */}
                     <div className="countdown-container">
+                        <div className="time-box">
+                            <span id="hours">{String(timeLeft.hours).padStart(2, '0')}</span>
+                            <span className="label">Hours</span>
+                        </div>
+                        <div className="separator">:</div>
                         <div className="time-box">
                             <span id="minutes">{String(timeLeft.minutes).padStart(2, '0')}</span>
                             <span className="label">Minutes</span>
@@ -571,14 +580,14 @@ const Home = () => {
             <section className="faq-section">
                 <div className="content-container">
                     <h2 className="section-headline">Frequently Asked Questions</h2>
-                    <div className="faq-container">
+                    <div className="faq-container animate-on-scroll fade-in-up">
                         {[
                             { q: "How fast will I see results?", a: "Results can vary, but many clients see initial improvements in as little as 15-30 days. The full process depends on the complexity of your credit profile, but our Metro 2 compliance strategies are designed for speed and efficiency." },
                             { q: "Do I need an LLC to get started?", a: "No, you don't need an LLC to start the personal credit repair process. However, for the business funding and structure packages (Gold, Platinum, Mentorship), we will guide you through setting up your LLC correctly to maximize your funding potential." },
                             { q: "What if I have bankruptcies or repossessions?", a: "Our advanced dispute methods, including Metro 2 and Consumer Law challenges, are effective at addressing complex negative items like bankruptcies and repossessions. We work to remove or correct these items to improve your creditworthiness." },
                             { q: "Is the software easy to use?", a: "Yes! The AI Credit Repair Software included in the bonuses is user-friendly and designed for beginners. Plus, you get lifetime access to our course library to guide you every step of the way." }
                         ].map((item, index) => (
-                            <div key={index} className={`faq-item animate-on-scroll fade-in-up ${activeFaq === index ? 'active' : ''}`}>
+                            <div key={index} className={`faq-item ${activeFaq === index ? 'active' : ''}`}>
                                 <div className="faq-question" onClick={() => toggleFaq(index)}>
                                     <h3>{item.q}</h3>
                                     <span className="faq-toggle" style={{ transform: activeFaq === index ? 'rotate(45deg)' : 'rotate(0deg)' }}>+</span>

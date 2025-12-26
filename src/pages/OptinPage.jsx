@@ -72,7 +72,7 @@ function OptinPage() {
                 <div className="bonus-section">
                     <h3 className="bonus-title">Also Receive A Secret Bonus!!!</h3>
                     <p className="bonus-text">
-                        Sent straight to your phone <span className="bonus-value">(Value $497)</span> (only valid until 12/05/2025)
+                        Sent straight to your phone <span className="bonus-value">(Value $497)</span> (only valid until 01/01/2026)
                     </p>
                 </div>
 

@@ -10,6 +10,27 @@ import { Link } from 'react-router-dom';
 const Home = () => {
     const [timeLeft, setTimeLeft] = useState({ hours: 0, minutes: 0, seconds: 0 });
     const [activeFaq, setActiveFaq] = useState(null);
+    const [snowflakes, setSnowflakes] = useState([]);
+
+    // Generate Snowflakes
+    useEffect(() => {
+        const createSnowflake = () => ({
+            id: Math.random(),
+            left: Math.random() * 100 + '%',
+            animationDuration: (Math.random() * 10 + 5) + 's',
+            opacity: Math.random(),
+            fontSize: (Math.random() * 20 + 10) + 'px'
+        });
+
+        const initialSnowflakes = Array.from({ length: 50 }, createSnowflake);
+        setSnowflakes(initialSnowflakes);
+
+        const interval = setInterval(() => {
+            setSnowflakes(prev => [...prev.slice(1), createSnowflake()]);
+        }, 2000);
+
+        return () => clearInterval(interval);
+    }, []);
 
     // Countdown Timer - Time until midnight
     useEffect(() => {
@@ -114,6 +135,23 @@ const Home = () => {
 
     return (
         <div className="page-wrapper">
+            {/* Snowfall */}
+            <div className="snow-container">
+                {snowflakes.map(sf => (
+                    <div
+                        key={sf.id}
+                        className="snowflake"
+                        style={{
+                            left: sf.left,
+                            animationDuration: sf.animationDuration,
+                            opacity: sf.opacity,
+                            fontSize: sf.fontSize
+                        }}
+                    >
+                        ❄
+                    </div>
+                ))}
+            </div>
             {/* Parallax Background Shapes */}
             <div className="parallax-shapes">
                 <div className="shape shape-1"></div>
@@ -143,8 +181,8 @@ const Home = () => {
                         </div>
                     </div>
 
-                    <h1 className="main-headline animate-on-scroll fade-in-up">CYBER MONDAY EXTENDED SALE</h1>
-                    <p className="sub-headline animate-on-scroll fade-in-up delay-100">Get Access To The Ultimate Credit Repair & Funding Blueprint. Limited Time Offer Ends Soon.</p>
+                    <h1 className="main-headline animate-on-scroll fade-in-up">🎄 CHRISTMAS SALE 🎁</h1>
+                    <p className="sub-headline animate-on-scroll fade-in-up delay-100">Deck the Halls with Credit Success! Get Access To The Ultimate Credit Repair & Funding Blueprint. Holiday Offer Ends Soon. 🎅</p>
 
                     <div className="video-wrapper animate-on-scroll zoom-in delay-200">
                         <div style={{ position: 'relative', paddingBottom: '56.25%', height: 0, overflow: 'hidden' }}>
@@ -367,7 +405,7 @@ const Home = () => {
             {/* Description/Sales Copy Section */}
             <section className="copy-section">
                 <div className="content-container text-left">
-                    <h2 className="copy-headline">Introducing The Cyber Monday Extended Sale Mentorship For Beginner & Advanced Entrepreneurs Looking to Leverage Credit To Build a 6-7 Figure Business.</h2>
+                    <h2 className="copy-headline">Introducing The Christmas Sale Mentorship For Beginner & Advanced Entrepreneurs Looking to Leverage Credit To Build a 6-7 Figure Business.</h2>
 
                     <h3 className="copy-subheadline">Are you tired of burning out from your 9-5 and want to finally make this whole “entrepreneur” thing work for you but do not know how?</h3>
 

@@ -9,7 +9,7 @@ function App() {
         <Router>
             <Routes>
                 <Route path="/" element={<OptinPage />} />
-                <Route path="/black" element={<Home />} />
+                <Route path="/xmas" element={<Home />} />
                 <Route path="/checkout" element={<Checkout />} />
             </Routes>
         </Router>

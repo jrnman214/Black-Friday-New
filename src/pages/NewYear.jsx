@@ -12,6 +12,19 @@ const NewYear = () => {
     const [timeLeft, setTimeLeft] = useState({ hours: 0, minutes: 0, seconds: 0 });
     const [activeFaq, setActiveFaq] = useState(null);
 
+    // Update SEO Title & Meta Tags
+    useEffect(() => {
+        document.title = "New Year Sale - 6 Figur Funding";
+
+        let metaDesc = document.querySelector('meta[name="description"]');
+        if (!metaDesc) {
+            metaDesc = document.createElement('meta');
+            metaDesc.name = "description";
+            document.head.appendChild(metaDesc);
+        }
+        metaDesc.content = "Start 2026 with financial freedom! Join our New Year Sale for exclusive deals on Credit Repair & Funding Blueprints.";
+    }, []);
+
 
 
     // Countdown Timer - Time until midnight

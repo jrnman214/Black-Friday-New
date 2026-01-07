@@ -124,8 +124,43 @@
 }
 
 .new-year-theme .pricing-card.gold,
-.new-year-theme .pricing-card.platinum,
-.new-year-theme .pricing-card.mentorship {
+.new-year-theme .pricing-card.platinum {
     border-color: var(--primary-gold);
     box-shadow: 0 0 20px rgba(255, 215, 0, 0.1);
+}
+
+.new-year-theme .pricing-card.mentorship {
+    border-color: var(--primary-gold);
+    box-shadow: 0 0 30px rgba(255, 215, 0, 0.2);
+    transform: scale(1.02);
+    position: relative;
+    border-width: 3px;
+    animation: goldGlow 4s ease-in-out infinite;
+}
+
+@keyframes goldGlow {
+
+    0%,
+    100% {
+        box-shadow: 0 0 20px rgba(255, 215, 0, 0.2);
+    }
+
+    50% {
+        box-shadow: 0 0 50px rgba(255, 215, 0, 0.4);
+    }
+}
+
+.new-year-theme .pricing-card.mentorship::after {
+    content: 'BEST VALUE & RESULTS';
+    position: absolute;
+    top: 15px;
+    right: -35px;
+    background: var(--primary-gold);
+    color: #000;
+    padding: 5px 40px;
+    font-size: 0.7rem;
+    font-weight: bold;
+    transform: rotate(45deg);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+    z-index: 10;
 }

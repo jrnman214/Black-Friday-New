@@ -345,6 +345,11 @@ const NewYear = () => {
                                 <ul className="feature-list">
                                     <li>Direct Access to Me via Cell Phone</li>
                                     <li>Weekly 1-on-1 Zoom Calls for 3 Months</li>
+                                    <li>Digital Product Empire: Scale to 6-Figures with Automated "Sleep Income"</li>
+                                    <li>Private Ad Strategy: Master Paid Traffic & Print Cash on Demand</li>
+                                    <li>Organic Growth Blueprint: Build a Massive Following & Pull Customers for Free</li>
+                                    <li>High-Ticket Funding Business: Launch Your Own Agency & Earn $10k-$50k Monthly</li>
+                                    <li>AI Integration Mastery: Automate 100% of Your Content & Marketing</li>
                                     <li>Custom Business Strategy Plan</li>
                                     <li>Hands-on Funding Assistance</li>
                                     <li>Exclusive Networking Events</li>

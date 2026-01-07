@@ -1,0 +1,131 @@
+/* NewYear.css */
+
+.new-year-theme {
+    --primary-gold: #FFD700;
+    --dark-gold: #B8860B;
+    --accent-gold: #FFC300;
+    --black-bg: #050505;
+    --dark-card: #0a0a0a;
+}
+
+.new-year-theme body {
+    background:
+        radial-gradient(circle at 20% 30%, rgba(255, 215, 0, 0.1) 0%, transparent 50%),
+        radial-gradient(circle at 80% 70%, rgba(184, 134, 11, 0.1) 0%, transparent 50%),
+        linear-gradient(135deg, #000000 0%, #0a0a0a 100%);
+}
+
+.new-year-theme .main-headline {
+    color: var(--primary-gold);
+    font-family: 'Oswald', sans-serif;
+    /* Clean, bold font for New Year */
+    text-shadow: 0 0 20px rgba(255, 215, 0, 0.4), 2px 2px 4px rgba(0, 0, 0, 0.8);
+}
+
+.new-year-theme .video-wrapper {
+    border: 3px solid var(--primary-gold);
+    box-shadow: 0 0 30px rgba(255, 215, 0, 0.3);
+}
+
+.new-year-theme .video-wrapper::before,
+.new-year-theme .video-wrapper::after {
+    content: '✨';
+    /* Festive spark instead of snowflake */
+    color: var(--primary-gold);
+}
+
+.new-year-theme .time-box {
+    background: rgba(255, 215, 0, 0.05);
+    border: 2px solid var(--primary-gold);
+    box-shadow: 0 0 15px rgba(255, 215, 0, 0.2);
+}
+
+.new-year-theme .time-box .label,
+.new-year-theme .separator {
+    color: var(--primary-gold);
+}
+
+.new-year-theme .pricing-card {
+    border-color: var(--dark-gold);
+    background: #000;
+}
+
+.new-year-theme .pricing-card::before {
+    background: linear-gradient(90deg, var(--dark-gold), var(--primary-gold), var(--dark-gold));
+}
+
+.new-year-theme .cta-btn {
+    background: linear-gradient(135deg, var(--primary-gold) 0%, var(--dark-gold) 100%);
+    color: #000;
+    border-bottom: 4px solid #8B6508;
+    box-shadow: 0 4px 15px rgba(255, 215, 0, 0.2);
+    position: relative;
+    overflow: hidden;
+}
+
+.new-year-theme .cta-btn::after {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: linear-gradient(45deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+    transform: rotate(45deg);
+    transition: 0.5s;
+    animation: shimmer 3s infinite;
+}
+
+@keyframes shimmer {
+    0% {
+        transform: translateX(-100%) rotate(45deg);
+    }
+
+    100% {
+        transform: translateX(100%) rotate(45deg);
+    }
+}
+
+.new-year-theme .cta-btn:hover {
+    background: linear-gradient(135deg, #fff 0%, var(--primary-gold) 100%);
+}
+
+.new-year-theme .cta-subtext {
+    color: #000;
+}
+
+.new-year-theme .section-headline::after {
+    background: linear-gradient(90deg, transparent, var(--primary-gold), transparent);
+}
+
+.new-year-theme .copy-subheadline,
+.new-year-theme .bonuses-section .section-headline,
+.new-year-theme .free-bonuses-section .section-headline {
+    color: var(--primary-gold);
+}
+
+.new-year-theme .faq-toggle {
+    color: var(--primary-gold);
+}
+
+.new-year-theme .value-tag {
+    color: #999;
+    text-decoration-color: var(--primary-gold);
+}
+
+.new-year-theme .highlight-red {
+    color: var(--primary-gold) !important;
+}
+
+/* Specific pricing tier tweaks to match gold/black */
+.new-year-theme .pricing-card.silver-disabled {
+    border-color: #333;
+    opacity: 0.8;
+}
+
+.new-year-theme .pricing-card.gold,
+.new-year-theme .pricing-card.platinum,
+.new-year-theme .pricing-card.mentorship {
+    border-color: var(--primary-gold);
+    box-shadow: 0 0 20px rgba(255, 215, 0, 0.1);
+}
